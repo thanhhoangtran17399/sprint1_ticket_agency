@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i%7CMerriweather:300,300i,400,400i,700,700i,900,900i"
+        rel="stylesheet">
+</head>
+<body>
+<!--top bar-->
+<div class="container-fluid">
+  <div id="info-bar" class="row text-white">
+    <div class="col-6 d-flex align-items-center" style="padding-left: 100px">
+      <ul class="list-inline">
+        <li class="list-inline-item"><i class="fa fa-map-marker"></i> 295 Nguyễn Tất Thành, DN</li>
+        <li class="list-inline-item"><i class="fa fa-phone"></i> 0236 6517 021</li>
+      </ul>
+    </div>
+    <div class="col-6 d-flex align-items-center" style="padding-right: 100px">
+      <ul class="list-inline ml-auto">
+        <li class="list-inline-item"><i class="fa fa-lock"></i><a routerLink="/login">Đăng nhập</a> </li>
+        <li class="list-inline-item"><i class="fa fa-plus"></i><a routerLink="/register"> Đăng kí</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--top bar end-->
+<!--nav bar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <a class="navbar-brand" href="#"><span><i class="fa fa-plane"></i>C06</span>AIRLINE</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">TRANG CHỦ <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item border-left">
+        <a class="nav-link" href="#">TIN KHUYẾN MÃI</a>
+      </li>
+      <li class="nav-item border-left">
+        <a class="nav-link" href="#">GIỚI THIỆU</a>
+      </li>
+      <li class="nav-item border-left" style="padding-right: 80px">
+        <a class="nav-link" href="#">QUY ĐỊNH HÀNH LÍ</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!--nav bar end-->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6">
+      <fieldset class="border">
+        <legend style="width: auto" class="ml-3 d-flex justify-content-center">Đặt vé</legend>
+        <form action="" class="form-group">
+          <div class="row">
+            <div class="col-5 pl-4 p-0">
+              <mat-form-field>
+                <mat-label>Điểm đi</mat-label>
+                <input matInput placeholder="Sài Gòn">
+              </mat-form-field>
+            </div>
+            <div class="col-2 d-flex justify-content-start align-items-center">
+              <h1>⇄</h1>
+            </div>
+            <div class="col-5 pl-4 p-0">
+              <mat-form-field>
+                <mat-label>Điểm đến</mat-label>
+                <input matInput placeholder="Đà Nẵng">
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5 pl-4 p-0">
+              <mat-form-field>
+                <mat-label>Ngày đi</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+            </div>
+            <div class="col-2 d-flex justify-content-start align-items-center">
+              <h1>⇄</h1>
+            </div>
+            <div class="col-5 pl-4 p-0">
+              <mat-form-field>
+                <mat-label>Ngày về</mat-label>
+                <input matInput [matDatepicker]="picker2">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+              </mat-form-field>
+            </div>
+          </div>
+          <mat-divider></mat-divider>
+          <div class="row">
+            <div class="col-3 pl-5 d-flex align-items-center">Người lớn</div>
+            <div class="col-4">
+              <mat-form-field>
+                <mat-label>Số lượng</mat-label>
+                <mat-select>
+                  <mat-option value="1">0</mat-option>
+                  <mat-option value="1">1</mat-option>
+                  <mat-option value="2">2</mat-option>
+                  <mat-option value="3">3</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-5 d-flex align-items-center">(Từ 12 tuổi trở lên)</div>
+          </div>
+          <div class="row">
+            <div class="col-3 pl-5 d-flex align-items-center">Trẻ em</div>
+            <div class="col-4">
+              <mat-form-field>
+                <mat-label>Số lượng</mat-label>
+                <mat-select>
+                  <mat-option value="1">0</mat-option>
+                  <mat-option value="1">1</mat-option>
+                  <mat-option value="2">2</mat-option>
+                  <mat-option value="3">3</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-5 d-flex align-items-center">(Từ 2 đến dưới 12 tuổi)</div>
+          </div>
+          <div class="row">
+            <div class="col-3 pl-5 d-flex align-items-center">Em bé</div>
+            <div class="col-4">
+              <mat-form-field>
+                <mat-label>Số lượng</mat-label>
+                <mat-select>
+                  <mat-option value="1">0</mat-option>
+                  <mat-option value="1">1</mat-option>
+                  <mat-option value="2">2</mat-option>
+                  <mat-option value="3">3</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-5 d-flex align-items-center">(Dưới 2 tuổi)</div>
+          </div>
+          <div class="row">
+            <div class="col-7"></div>
+            <div class="col-5"><button>Tìm vé</button></div>
+          </div>
+        </form>
+      </fieldset>
+    </div>
+    <div class="col-6"><img src="https://files.weekendgowhere.sg/package/176/2Z6OdAoel8.jpg" alt="banner" style="width: 100%"></div>
+  </div>
+</div>
+</body>
+</html>
